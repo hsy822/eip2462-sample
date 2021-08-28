@@ -2,6 +2,7 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
+  "homepage" : "http://hsy822.github.io/eip2462-sample",
   "dependencies": {
     "@celo/contractkit": "^0.4.12",
     "caver-js": "^1.2.0",

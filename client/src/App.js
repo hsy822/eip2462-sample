@@ -16,10 +16,9 @@ import {
   Card,
   CardHeader,
   CardBody,
-  CardFooter,
   ListGroupItem,
   ListGroup,
-  Table,
+  UncontrolledTooltip,
   Modal, ModalBody
 } from "reactstrap";
 
@@ -795,6 +794,19 @@ class App extends Component {
                         </Row>
                       </CardBody> 
                     </Card>
+                  </Col>
+                </Row>
+                <Row className="row-grid align-items-center my-md">
+                  <Col lg="6">
+                    <h3 className="text-info font-weight-light mb-2">
+                      Thank you for visiting!
+                    </h3>
+                    <h4 className="mb-0 font-weight-light">
+                      Let's get in touch on any of these platforms.
+                    </h4>
+                  </Col>
+                  <Col className="text-lg-center btn-wrapper" lg="6">
+                      <h4><a href="https://github.com/hsy822/eip2462-sample" target="_blank">Github</a></h4>
                   </Col>
                 </Row>
               </Container>
