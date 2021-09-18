@@ -594,17 +594,17 @@ class App extends Component {
           <div className="">
             <div className="" style={{margin: '100px', marginBottom: '0px'}}>
               <h1 className="h1-seo"><a href="https://github.com/daoauth/EIPs/blob/master/EIPS/eip-2462.md" target="_blank">EIP-2462 Example</a></h1>
-              <h3 className="d-none d-sm-block">1. Choose chain and just sign JSON interface by using ONLY Metamask</h3>
+              <h3 className="d-sm-block">1. Choose chain and just sign JSON interface by using ONLY Metamask</h3>
               <img
                 style={{width: '500px', marginBottom: '50px'}}
                 src={require("./assets/img/json.PNG")}
               />
-              <h3 className="d-none d-sm-block">2. Relayer pay gas fee and send a transaction to the blockchain of your choice</h3>
+              <h3 className="d-sm-block">2. Relayer pay gas fee and send a transaction to the blockchain of your choice</h3>
               <img
                 style={{width: '700px', marginBottom: '50px'}}
                 src={require("./assets/img/function.PNG")}
               />   
-              <h3 className="d-none d-sm-block">3. You don't need to pay gas fee 👍</h3>
+              <h3 className="d-sm-block">3. You don't need to pay gas fee 👍</h3>
               <img
                 style={{width: '600px', marginBottom: '20px'}}
                 src={require("./assets/img/relayer.png")}
