@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/eip2462-sample/static/css/main.d89c78a3.chunk.css",
-    "main.js": "/eip2462-sample/static/js/main.6127621d.chunk.js",
-    "main.js.map": "/eip2462-sample/static/js/main.6127621d.chunk.js.map",
+    "main.js": "/eip2462-sample/static/js/main.32c56596.chunk.js",
+    "main.js.map": "/eip2462-sample/static/js/main.32c56596.chunk.js.map",
     "runtime-main.js": "/eip2462-sample/static/js/runtime-main.a1cf4171.js",
     "runtime-main.js.map": "/eip2462-sample/static/js/runtime-main.a1cf4171.js.map",
-    "static/js/2.08795db6.chunk.js": "/eip2462-sample/static/js/2.08795db6.chunk.js",
-    "static/js/2.08795db6.chunk.js.map": "/eip2462-sample/static/js/2.08795db6.chunk.js.map",
+    "static/js/2.00c2f6d5.chunk.js": "/eip2462-sample/static/js/2.00c2f6d5.chunk.js",
+    "static/js/2.00c2f6d5.chunk.js.map": "/eip2462-sample/static/js/2.00c2f6d5.chunk.js.map",
     "index.html": "/eip2462-sample/index.html",
-    "precache-manifest.2922202d2dc36840fbd5c408071b47bf.js": "/eip2462-sample/precache-manifest.2922202d2dc36840fbd5c408071b47bf.js",
+    "precache-manifest.0375326f0234996b523bb2be1a8947f0.js": "/eip2462-sample/precache-manifest.0375326f0234996b523bb2be1a8947f0.js",
     "service-worker.js": "/eip2462-sample/service-worker.js",
     "static/css/main.d89c78a3.chunk.css.map": "/eip2462-sample/static/css/main.d89c78a3.chunk.css.map",
     "static/media/celo.png": "/eip2462-sample/static/media/celo.868adf04.png",
@@ -23,8 +23,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.a1cf4171.js",
-    "static/js/2.08795db6.chunk.js",
+    "static/js/2.00c2f6d5.chunk.js",
     "static/css/main.d89c78a3.chunk.css",
-    "static/js/main.6127621d.chunk.js"
+    "static/js/main.32c56596.chunk.js"
   ]
 }
