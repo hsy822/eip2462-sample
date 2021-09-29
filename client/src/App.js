@@ -263,30 +263,30 @@ class App extends Component {
       const celoOwner = await celoContractInstance.methods.owner().call();
 
       // Set MATIC Provider
-      const polygon = new Web3.providers.HttpProvider(
-        "https://rpc-mumbai.matic.today"
-      );
-      const maticProvider = new Web3(polygon);
+      // const polygon = new Web3.providers.HttpProvider(
+      //   "https://rpc-mumbai.matic.today"
+      // );
+      // const maticProvider = new Web3(polygon);
 
       // Set Relayer MATIC Wallet
-      const maticWalletInstance = maticProvider.eth.accounts.privateKeyToAccount(
-        "0x0bf8b938ea5bb7b3eb0149a27de7f8a4387975685e11161a9212705104197917"
-      );
-      maticProvider.eth.accounts.wallet.add(maticWalletInstance);
+      // const maticWalletInstance = maticProvider.eth.accounts.privateKeyToAccount(
+      //   "0x0bf8b938ea5bb7b3eb0149a27de7f8a4387975685e11161a9212705104197917"
+      // );
+      // maticProvider.eth.accounts.wallet.add(maticWalletInstance);
       
-      const maticRelayer = maticProvider.eth.accounts.wallet[0].address;
+      // const maticRelayer = maticProvider.eth.accounts.wallet[0].address;
       
       // Get MATIC Relayer balance
-      const maticRelayerBalance = maticProvider.utils.fromWei(await maticProvider.eth.getBalance(maticRelayer))
+      // const maticRelayerBalance = maticProvider.utils.fromWei(await maticProvider.eth.getBalance(maticRelayer))
 
       // Set MATIC contract
-      const maticContractInstance = new maticProvider.eth.Contract(
-        this.state.abi,
-        this.state.maticContractAddress
-      );
+      // const maticContractInstance = new maticProvider.eth.Contract(
+      //   this.state.abi,
+      //   this.state.maticContractAddress
+      // );
 
       // Set MATIC contract owner
-      const maticOwner = await maticContractInstance.methods.owner().call();
+      // const maticOwner = await maticContractInstance.methods.owner().call();
 
       this.setState(
         { 
@@ -295,7 +295,7 @@ class App extends Component {
           ethContractInstance, ethProvider, ethRelayer, ethRelayerBalance, ethOwner,
           klayContractInstance, klayProvider, klayRelayer, klayRelayerBalance, klayOwner,
           celoContractInstance, celoProvider, celoRelayer, celoRelayerBalance, celoOwner,
-          maticContractInstance, maticProvider, maticRelayer, maticRelayerBalance, maticOwner
+          // maticContractInstance, maticProvider, maticRelayer, maticRelayerBalance, maticOwner
         }
       );
     } catch (error) {
@@ -666,50 +666,6 @@ class App extends Component {
                       </CardBody>
                     </Card>
                   </Col>
-                  <Col md="6" style={{ marginBottom: "150px" }}>
-                    <Card className="card-coin card-plain" style={{ minHeight: 300 }}>
-                      <CardHeader>
-                        <img
-                          alt="..."
-                          className="img-center img-fluid"
-                          src={require("./assets/img/polygon.png")}
-                        />
-                      </CardHeader>
-                      <CardBody style={{ marginTop: 23 }}>
-                        <Row>
-                          <Col className="text-center" md="12">
-                            <h4 className="text-uppercase">Polygon</h4>
-                            <p>Contract Address: 
-                              <a href={"https://mumbai.polygonscan.com/address/"+this.state.maticContractAddress} target="_blank">
-                                {" "+this.state.maticContractAddress}
-                              </a>
-                            </p>
-                            <hr className="line-success" />
-                            <p>Relayer: {this.state.maticRelayer}</p>
-                            <p>Balance: {this.state.maticRelayerBalance} MATIC</p>
-                            <hr className="line-success" />
-                            <h4 style={{fontWeight: "bold"}}>Owner: {this.state.maticOwner}</h4>
-                          </Col>
-                        </Row>
-                        <Row>
-                            <ListGroup>
-                              <ListGroupItem></ListGroupItem>
-                                <ListGroupItem>
-                                  <Button
-                                    className="btn-simple"
-                                    color="success"
-                                    onClick={()=>{this.sign('polygon', 80001)}}
-                                  >
-                                    Sign
-                                  </Button>
-                                </ListGroupItem>
-                            </ListGroup>
-                        </Row>
-                      </CardBody>                      
-                    </Card>
-                  </Col>
-                </Row>
-                <Row>
                   <Col md="6" style={{ marginBottom: "60px" }}>
                     <Card className="card-coin card-plain" style={{ minHeight: 300 }}>
                       <CardHeader>
@@ -752,6 +708,51 @@ class App extends Component {
                       </CardBody> 
                     </Card>
                   </Col>
+                </Row>
+                <Row>
+                {/* <Col md="6" style={{ marginBottom: "150px" }}>
+                    <Card className="card-coin card-plain" style={{ minHeight: 300 }}>
+                      <CardHeader>
+                        <img
+                          alt="..."
+                          className="img-center img-fluid"
+                          src={require("./assets/img/polygon.png")}
+                        />
+                      </CardHeader>
+                      <CardBody style={{ marginTop: 23 }}>
+                        <Row>
+                          <Col className="text-center" md="12">
+                            <h4 className="text-uppercase">Polygon</h4>
+                            <p>Contract Address: 
+                              <a href={"https://mumbai.polygonscan.com/address/"+this.state.maticContractAddress} target="_blank">
+                                {" "+this.state.maticContractAddress}
+                              </a>
+                            </p>
+                            <hr className="line-success" />
+                            <p>Relayer: {this.state.maticRelayer}</p>
+                            <p>Balance: {this.state.maticRelayerBalance} MATIC</p>
+                            <hr className="line-success" />
+                            <h4 style={{fontWeight: "bold"}}>Owner: {this.state.maticOwner}</h4>
+                          </Col>
+                        </Row>
+                        <Row>
+                            <ListGroup>
+                              <ListGroupItem></ListGroupItem>
+                                <ListGroupItem>
+                                  <Button
+                                    className="btn-simple"
+                                    color="success"
+                                    onClick={()=>{this.sign('polygon', 80001)}}
+                                  >
+                                    Sign
+                                  </Button>
+                                </ListGroupItem>
+                            </ListGroup>
+                        </Row>
+                      </CardBody>                      
+                    </Card>
+                  </Col> */}
+                  
                   <Col md="6" style={{ marginBottom: "60px" }}>
                     <Card className="card-coin card-plain" style={{ minHeight: 300 }}>
                       <CardHeader>
